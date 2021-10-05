@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheap Flights, Airfares and Air Tickets | Expedia</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en"/>
+    <link rel="stylesheet" href="../CSS/Flights.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link type="image/x-icon" href="https://www.expedia.co.in/favicon.ico" sizes="16x16 32x32" rel="icon" />
+    <link rel="stylesheet" href="..\CSS\flightComponent.css">
+</head>
+<body>
+
+    <div class="navbar"  onclick="travellerFunctionHide()">
+
+    </div>
+
+
+    <div class="selection">
+        <div style="    padding-left: 4%; ">
+            <select name="One way"  class="select_Way">
+             <option value="oneWay">One way</option>
+             <option value="return">Return</option>
+             <option value="multiCity">Multi-city</option>
+            </select>
+       </div>
+        <!------------------------------------------------------------>   
+
+       <div style="    padding-left: 4%;" >
+               <div class="select_Way" id="totalTraveller" onclick="travellerFunction()"> 1 traveller ˅</div>
+               <div class="traveller_part">
+                  <p>We allow up to 6 travellers total per booking.</p>
+                <div class="adults">
+                   <div>Adults
+                        <p>18 and older</p>
+                   </div>
+                   <div><button onclick="adultCountMinus()">-</button>   </div>
+                   <div class="adultCount" id="adultCount">1</div>
+                   <div><button onclick="adultCountPlus()">+</button>   </div>
+                </div>
+                <div class="adults">
+                    <div>Children
+                         <p>Age 2 and 17</p>
+                    </div>
+                    <div><button onclick="childrenCountMinus()">-</button>   </div>
+                    <div class="childrenCount" id="childrenCount">0</div>
+                    <div><button onclick="childrenCountPlus()">+</button>   </div>
+                 </div>
+                 <div class="adults">
+                    <div>Infants
+                         <p>Younger than 2</p>
+                    </div>
+                    <div><button onclick="infantsCountMinus()">-</button>   </div>
+                    <div class="infantsCount" id="infantsCount">0</div>
+                    <div><button onclick="infantsCountPlus()">+</button>   </div>
+                 </div>
+                 <div id="doneCancel">
+                     <div onclick="travellerFunctionHide()">Cancel</div>
+                     <div onclick="peopleBooked()">Done</div>
+                 </div>
+               </div>
+        </div>
+               <!------------------------------------------------------------>   
+
+        <div style="    padding-left: 4%; ">
+            <select name="One way"  class="select_Way">
+                <option value="oneWay">Economy</option>
+               </select>
+        </div>
+        <div style="    padding-left: 4%; ">
+            <select  class="select_Way">
+                <option value="Economy">Air airline</option>
+               </select>
+        </div>
+        <div style="    padding-left: 4%; ">
+            <select  class="select_Way">
+                <option value="oneWay"> More options</option>
+               </select>
+        </div>
+    </div>
+
+    <div class="flight_s">
+      <div class="s_b">
+
+      </div>
+    </div>
+   
+    <div class="chooseFlight" onclick="travellerFunctionHide()">
+        
+        <div class="filter">
+            <h1>Filter by</h1>  
+            <div class="stops">
+              <div style="grid-area: 'a';"><p>Stops</p></div>
+              <div style="grid-area: 'b';"><p>From</p></div>
+              <div style="grid-area: 'c';"> <input onclick="selectDirectFlights()" type="checkbox">   Direct</div>
+              <div style="grid-area: 'd';"><p>Rs4,211</p></div>
+              <div style="grid-area: 'e';"><input onclick="selectOneStopFlights()" type="checkbox">    1 stop</div>
+              <div style="grid-area: 'f';"><p>Rs3,451</p></div>
+            </div>
+
+            <div class="stops">
+              <div style="grid-area: 'a';"><p>Airlines</p></div>
+              <div style="grid-area: 'b';"><p>From</p></div>
+              <div style="grid-area: 'c';"> <input onclick="selectIndigo()" type="checkbox">  Indigo</div>
+              <div style="grid-area: 'd';"><p>Rs3,451</p></div>
+              <div style="grid-area: 'e';"><input onclick="selectVistara()" type="checkbox">  Vistara</div>
+              <div style="grid-area: 'f';"><p>Rs4,433</p></div>
+            </div>
+            <h1>Departure time </h1>  
+            <div class="time">
+                <div class="classOfTime1" onclick="changeDepartureColor('#3662D8','classOfTime1');">
+                    <img src="../Images/sunrise.svg" >
+                    <p>Morning</p>
+                    <p>(05.00-11.59)</p>
+                </div>
+                <div  class="classOfTime2" onclick="changeDepartureColor('#3662D8','classOfTime2');">
+                  <img src="../Images/noon.svg" >
+                    <p>Afternoon</p>
+                    <p>(12.00-17.59)</p>
+                </div>
+                <div class="classOfTime3"  onclick="changeDepartureColor('#3662D8','classOfTime3');">
+                  <img src="../Images/evening.png" >
+                    <p>Evening</p>
+                    <p>(17.00-23.59)</p>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="middlePart">
+         
+         <h1>Choose departing flight</h1>
+         <div class="dayWisePrices">
+          <div class="inDayWisePrices">
+            <div>Tue, 5 Oct</div>
+            <div>Rs4,593</div>
+          </div>
+          <div class="inDayWisePrices">
+            <div>Wed, 6 Oct</div>
+            <div>Rs4,593</div>
+          </div>
+          <div class="inDayWisePrices">
+            <div>Thu, 7 Oct</div>
+            <div>Rs4,593</div>
+          </div>
+          <div class="inDayWisePrices">
+            <div>Fri, 8 Oct</div>
+            <div>Rs4,593</div>
+          </div>
+          <div class="inDayWisePrices">
+            <div>Sat, 9 Oct</div>
+            <div>Rs4,593</div>
+          </div>
+          <div class="inDayWisePrices">
+            <div>Sun, 10 Oct</div>
+            <div>Rs4,593</div>
+          </div>
+          <div class="inDayWisePrices">
+            <div>Mon, 11 Oct</div>
+            <div>Rs4,593</div>
+          </div>
+         </div>
+          <hr>
+          <div class="sortByPrice">
+            <div>
+             <p>Prices displayed include taxes and may 
+              change based on availability. You can review any additional 
+              fees before checkout. Prices are not final until you 
+              complete your purchase.</p>
+            </div>
+            <div>
+                <select onchange="check(this.value)" name="select Price" id="selectPrice">
+                  <option  value="Lowest">Price(Lowest)</option>
+                  <option  value="Highest">Price(Highest)</option>
+                </select>
+            </div>
+            </div>
+
+            <div class="display">
+              
+            </div>
+          
+        </div>
+
+
+
+
+
+        <div class="rightPart">
+            <img src="https://tpc.googlesyndication.com/simgad/17447823249981941085?" alt="">
+        </div>  
+    </div>
+
+
+<div class="footer">
+</div>
+<hr>
+
+<div class="footerCopyright">
+</div>
+
+
+</body>
+</html>
+<script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
+<script type="module">
+     import navbar from "../components/navbarImport.js";
+     let divNavbar = document.querySelector(".navbar");
+     divNavbar.innerHTML=navbar();
+
+     import { show, signin, signup, logout } from "../JavaScripts/navbar.js"
+      show();
+
+      let statusIn = document.getElementById("in");
+      let statusUp = document.getElementById("up");
+      let statusout = document.getElementById("out");
+
+      statusIn.onclick = () => {
+        signin();
+      };
+      statusUp.onclick = () => {
+        signup();
+      };
+      statusout.onclick = () => {
+        logout();
+      };
+
+     import footer from "../components/footerImport.js";
+     let divFooter = document.querySelector(".footer");
+     divFooter.innerHTML=footer();
+
+     import footerCopyright from "../components/footerCopyright.js";
+     let divfooterCopyright = document.querySelector(".footerCopyright");
+     divfooterCopyright.innerHTML=footerCopyright();
+
+     import flightComponent from "../components/flightComponent.js";
+     let sb = document.getElementsByClassName("s_b");
+     sb[0].innerHTML = flightComponent();
+
+     sb[0].removeChild(sb[0].children[0]);
+     let sTemp = sb[0].children[0];
+     sTemp.removeChild(sTemp.children[3]);
+     let sTemp2 = sb[0];
+     sTemp2.children[0].children[2].style.width = "28%";
+     sTemp2.children[1].style.marginTop = "2%";
+
+     let StoredData = JSON.parse(localStorage.getItem("storeCityDate"));
+     
+     sTemp2.children[0].children[0].children[1].children[0].style.fontSize = "12px";
+     sTemp2.children[0].children[0].children[1].children[1].innerText = StoredData[0].DepartCity;
+
+     sTemp2.children[0].children[1].children[2].children[0].style.fontSize = "12px";
+     sTemp2.children[0].children[1].children[2].children[1].innerText = StoredData[0].ArriveCity;
+
+     sTemp2.children[0].children[2].children[1].children[0].style.fontSize = "12px";
+     sTemp2.children[0].children[2].children[1].children[1].innerHTML = StoredData[0].showDate;
+
+    //  console.log(StoredData);
+</script>
+
+<script src="../JavaScripts/Flights.js"></script>

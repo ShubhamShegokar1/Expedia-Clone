@@ -1,0 +1,441 @@
+*
+{
+    font-family: 'Open Sans', sans-serif;  
+    margin: 0;
+    padding: 0;
+}
+
+/*---------------------------------navbar-----------------*/
+
+.navbar
+{
+   margin: 0;
+   padding: 0;
+   display: grid;
+   grid-template-columns:15% 39%  12% 7% 7% 7% 7% ;
+   height: 50px;
+   padding-top: 15px ;
+   font-size: 15px;
+   font-weight: 600;
+   text-align: right;
+   color: rgb(49, 48, 48);
+   border-bottom: 1px solid rgb(201, 201, 201);
+}
+.navbar >:first-child
+{
+  grid-area: 'a';
+}
+.navbar >:nth-child(2)
+{
+    grid-area: 'b';
+    text-align: left;
+    padding-left: 8%;
+}
+
+.navbar >:nth-child(3)
+{
+    grid-area: 'c';
+   padding-left: 50%;   
+}
+.navbar >:nth-child(4)
+{
+    grid-area: 'd';
+}
+.navbar >:nth-child(5)
+{
+    grid-area: 'e';
+}
+.navbar >:nth-child(6)
+{
+    grid-area: 'f';
+}
+
+#category:hover + .category
+{
+    display: block;
+}
+
+.navbar p
+{
+    margin-top: 5px;
+}
+.navbar>:nth-child(3) 
+{
+   display: flex;
+}
+
+.navbar>:nth-child(3) img
+{
+    height: 30px;
+}
+
+ .navbar img
+{
+    cursor: pointer;
+    color: #3662D8;
+}
+
+.navbar p
+{
+    cursor: pointer;
+    color: #3662D8;
+}
+
+
+.category
+{
+  background-color: white;
+  position:absolute;
+  border-radius: 7px;
+  width: 20%;
+  font-size: 17px;
+  box-shadow: 5px 10px 18px #272727;
+  display: none;
+  z-index: 5;
+}
+
+.category >:nth-child(1)
+{
+  margin-top: 7%;
+}
+.category >:nth-child(5)
+{
+  margin-bottom: 10%;
+}
+.category ul
+{
+  margin-top: 4%;
+  text-align: left;
+  padding-left: 10%;
+ 
+}
+.category ul:hover
+{
+  background-color: #E7EDFD;
+  cursor: pointer;
+}
+
+
+.category img
+{
+    height: 15px;
+    padding-right: 10px;
+}
+
+.category  .font_color_1
+{
+    height: 15px;
+    padding-right: 10px;
+}
+
+
+
+/*---------------------------------top part-----------------*/
+
+.traveller_part
+{
+    width: 20%;
+    border: 1px solid black;
+    font-size: 15px;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    padding: 1%;
+    display: none;
+}
+.traveller_part>:nth-child(5)
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    margin-top: 5%;
+}
+#doneCancel div
+{
+  color: #3662D8;
+}
+#doneCancel div:hover
+{
+  background-color: #E7EDFD;
+  cursor: pointer;
+}
+
+
+.adults
+{
+  display: grid;
+  grid-template-columns: 60% 10% 20% 10%;
+  padding-top: 5%;
+  font-weight: 600;
+}
+.adults button
+{
+    border-radius: 50%;
+    font-size: large;
+}
+.adults p
+{
+  font-size: 12px;
+}
+
+
+.chooseFlight div
+{
+  padding: 2%;
+}
+.selection
+{
+    display: flex;
+    width: 70%;
+    margin:4% 0 2% 3%;
+}
+
+
+
+
+.select_Way
+{
+  border: none;
+  color: #3662D8;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.select_Way:hover
+{
+  cursor: pointer;
+  background-color: #edeff5;
+  text-decoration: underline;
+}
+
+
+.flight_s{
+  width: 70%;
+  height: 110px;
+  /* border: 1px solid black; */
+  margin-left: 2%;
+}
+
+
+.s_b{
+  width: 95%;
+  height: 100%;
+  padding: 1%;
+  margin-left: 4.4%;
+  display: flex;
+}
+
+#searchBtnDiv{
+  width: 12%;
+}
+
+#searchBtnDiv > button{
+  height: 55%;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #3662d8;
+  border: none;
+  padding: 1%;
+  color: white;
+  cursor: pointer;
+  font-family: "Centra No2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+/*---------------------------------left part-----------------*/
+
+
+.chooseFlight
+{
+    display: grid;
+    grid-template-columns: 25% 55% 20%;
+    height: 750px;
+    background-color: #F8F5F4;
+}
+ 
+.chooseFlight
+{
+   padding: 2% 5% 2% 5%;
+}
+
+
+.filter p , h1
+{
+ margin-top: 5px;
+margin-bottom: 5px;
+}
+
+.filter h1
+{
+    font-size: 20px;
+}
+.stops 
+{
+    font-size: 15px;
+}
+
+
+.stops >:first-child {
+    font-weight: 700;
+}
+
+.stops>:nth-child(2)
+{
+    font-weight: 700;
+}
+
+@media screen {
+.stops
+{
+    display: grid;
+    grid-template:'a b' 
+                   'c d' 
+                   'e f'; 
+}      
+}
+
+
+
+.time
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.time p
+{
+    text-align: center;
+    padding-top: 7%;
+}
+.time div
+{
+    margin: 9% 9% 9% 0;
+    border-radius: 7px;
+    background-color: white;
+    border: 1px solid rgb(155, 154, 154);
+}
+
+.time div:hover
+{
+    background-color: #E7EDFD;
+    cursor: pointer;
+}
+/*----------------------------------right part---------------------------------*/
+.rightPart
+{
+    text-align: center;
+}
+
+/*----------------------------------middle part---------------------------------*/
+
+.middlePart h1
+{
+  font-size: 17px;
+}
+.dayWisePrices
+{ 
+  display: grid;
+  grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
+}
+.inDayWisePrices
+{
+  border: 1px solid gray;
+  height: 40px;
+  background-color: white;
+  border-radius: 4px;
+  margin: 4%;
+  font-size: 11px;
+  text-align: center;
+}
+
+.inDayWisePrices>:nth-child(2)
+{
+  color: #0D7066;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.sortByPrice p{
+    font-size: 13px;
+}
+.sortByPrice
+{
+    display: flex;
+}
+#selectPrice
+{
+    font-size:15px;
+}
+
+.dayWisePrices div:hover
+{
+    background-color: #E7EDFD;
+    cursor: pointer;
+}
+
+
+.display
+{
+  height: 500px;
+  overflow: scroll;
+}
+
+.display div
+{
+  background-color: white;
+  margin-top: 2%;
+  border-radius: 4px;
+  height: 60px;
+}
+
+
+/*----------------------------display----------*/
+
+.inDisplay>:first-child
+{
+  height: 40%;
+  font-size: large;
+  font-weight: 600;
+}
+.inDisplay>:nth-child(2)
+{
+  height: 40%;
+}
+.classInDisplay
+{
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  text-align: center;
+  height: 70px !important;
+}
+
+.classInDisplay>:nth-child(3)
+{
+  font-size: large;
+  font-weight: 700;
+}
+
+.classInDisplay:hover
+{
+  box-shadow: 5px 5px 5px 2px grey;
+  cursor: pointer;
+}
+
+
+/*--------------------------------------------------------- footer ----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
